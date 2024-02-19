@@ -1,22 +1,14 @@
-(HCC Forth-gg)*   Background
+## (HCC Forth-gg)*   Background
     
-    MaisForth started from CamelForth (Bradford J. Rodriguez, 1995), but that's hardly visible now.  
-    The metacompiler is completely new and has nothing in common with the CamelForth metacompiler.  
-    Assembler notation has been altered and the target code is drastically changed. In fact the only things left from CamelForth are:  
-    \- the registerchoice for the Forth machine (direct threaded code);  
-    \- some of the larger primitives, as MOVE UM\* UM/MOD and a few others. In the target file those words are marked with 'BJR'.
+* MaisForth started from CamelForth (Bradford J. Rodriguez, 1995), but that's hardly visible now.  The metacompiler is completely new and has nothing in common with the CamelForth metacompiler.  Assembler notation has been altered and the target code is drastically changed. In fact the only things left from CamelForth are:
+    - the registerchoice for the Forth machine (direct threaded code);  
+    - some of the larger primitives, as MOVE UM\* UM/MOD and a few others. In the target file those words are marked with 'BJR'.
     
-*   Email
+* Files
     
-    MaisForth an601 may still have bugs. Please contact us when you have questions or remarks about MaisForth. Click [here](http://www.forth.hccnet.nl/mail-gb.htm) and then click on "Mail us".
-    
-*   Files
-    
-    an601-readme.html
-    
-    This file
-    
-    an601-leesmij.html
+* an601-readme.html  
+* This file
+* an601-leesmij.html
     
     idem, Dutch version
     
@@ -40,9 +32,8 @@
     
     Didactically colored target code
     
-    an601.bin
-    
-    MaisForth an601 ROM image (C000-FFFF)
+* _an601.bin_
+    - MaisForth an601 ROM image (C000-FFFF)
     
      
     

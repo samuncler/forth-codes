@@ -1,8 +1,6 @@
-color601 body{font-family:Monospace;color:#2c2;font-size:11pt } pre{font-family:Monospace;color:#2c2;font-size:11pt } b{color:#f44;font-weight:500} .y{color:#28f} .z{color:#aaa} .wit{color:#fff;} .box{border:1px solid #fff}
+07dec2005
 
-\\ 07dec2005
-
-\\ MAIS AN601 TARGET CODE -- Albert Nijhof -- 06jun2005
+MAIS AN601 TARGET CODE
 <----
 
   **:::MAIS:::   
