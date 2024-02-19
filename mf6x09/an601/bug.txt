@@ -1,0 +1,14 @@
+Bug in an601  maisforth
+-----------------------
+
+
+There is a bug in M+
+Redefine it before you use it:
+
+ : M+ ( du1 x -- du2 ) S>D D+ ;
+
+Or use        S>D D+
+in stead of   M+
+
+----- (A.N. -- jan2007)
+
