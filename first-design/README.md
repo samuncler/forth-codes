@@ -4,3 +4,4 @@ Following the advice of _Thinking Forth_, this area is to explore these paradigm
 
 ## The first design principle
 
+Ideal beginnings?
