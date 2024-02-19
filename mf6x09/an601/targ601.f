@@ -13,10 +13,6 @@ HEX \ throughout
 Put a TRACE before and a NOTRACE after a piece of code if you
 wish to study the details of what happens when that code is metacompiled.
 
-Zet TRACE voor en NOTRACE achter een stukje code als je wilt
-bekijken wat er gebeurt tijdens het metacompileren van die code.
-
-
 -- Direct-Threaded Forth model for Motorola 6809
    16 bit cell, 8 bit char, 8 bit (byte) adrs unit
    X = Forth W    free
@@ -129,7 +125,6 @@ I-DATA       \ Space reservation for cold users values ttt See USERBYTES in META
 
 \ At cold start the ROM data until here (C000-C0..)
 \ will be copied to RAM (00-..)
- 
 
 \ ----- 02 ----- doers
 
@@ -367,7 +362,7 @@ DROP  -2 UALLOT   \ Alleen de byte met RTI wordt meegenomen.
 \ Een vector neemt 3 userbytes ruimte in.
 
 \ 'NMI is de laatste "user"!
-\ Als je meer indirecte waarden wilt definiëren, voeg die dan in
+\ Als je meer indirecte waarden wilt definiï¿½ren, voeg die dan in
 \ voor de vectoren. De value USERBYTES in de metacompiler moet
 \ dan aangepast worden:
 \ userbytes  =  (aantal i-waarden)*2  +  (aantal vectoren)*3  -  2

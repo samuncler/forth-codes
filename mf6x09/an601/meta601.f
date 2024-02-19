@@ -1,7 +1,6 @@
-\ dec2005
+\ feb2024
 
-
-\ maisforth metacompiler - Albert Nijhof - 06jun2005
+\ malforth metacompiler
 
 \ META I
 
@@ -9,23 +8,23 @@ MARKER -META
 FORTH ALSO DEFINITIONS
 DECIMAL
 
-\ <---- Intro, uitbreiding van de Host Forth ---->
-\ Onderstaande 2 grootheden moeten met de hand ingevuld worden
-\ voordat het metacompileren begint. Zie begin van de Target file.
+\ <---- Intro, expansion of the Host Forth ---->
+\ The 2 quantities below must be filled in by hand
+\ before metacompilation begins. See beginning of Target file.
 
-HEX  C000 VALUE ORIGINTARGA \ Startadres van de nieuwe Forth.
+HEX  C000 VALUE ORIGINTARGA \ Starting address of the new Forth.
 HEX   5F VALUE USERBYTES    \ ORIGIN until ORIGIN+USERBYTES: area with cold data.
 DECIMAL
 
 \ Error messages
-: ?NOTYET     ABORT"  Bestaat nog niet " ;    \ (KOMPILE (MET-DOER xPOSTPONE x'
-: ?UNKNOWN    ABORT"  Wat is dit? " ;         \ >NUM HERE-IS
-: ?INPUT      ABORT"  Geen input " ;          \ BL-WORD x[CHAR]
-: ?INTERRUPTED ABORT"  Afgebroken " ;          \ WAIT/GO :::MAIS:::
-: ?STACK      DEPTH 0< ABORT"  Stack leeg " ; \ .STACK
-: ?USERSPACE  ABORT"  Te weinig userbytes " ; 
-: ?PREFIX     ABORT"  Niet geschikt voor prefixes " ;
-: ?PAIR   ( x y - ) <> ABORT" Afgekeurd " ;
+: ?NOTYET     ABORT"  Does not exist yet " ;    \ (COMPILE (WITHIN xPOSTPONE x'
+: ?UNKNOWN    ABORT"  What is this? " ;         \ >NUM HERE-IS
+: ?INPUT      ABORT"  No input " ;          \ BL-WORD x[CHAR]
+: ?INTERRUPTED ABORT"  Aborted " ;          \ WAIT/GO :::MAIS:::
+: ?STACK      DEPTH 0< ABORT"  Stack empty " ; \ .STACK
+: ?USERSPACE  ABORT"  Too few userbytes " ; 
+: ?PREFIX     ABORT"  Not suitable for prefixes " ;
+: ?PAIR   ( x y - ) <> ABORT" Rejected " ;
 
 \ Short for 'EXIT THEN'
 : } POSTPONE EXIT POSTPONE THEN ; IMMEDIATE
@@ -48,13 +47,6 @@ DECIMAL
 IGNORE <---- ----> \ Skip any text between <---- and ---->
 
 <----  Forth skips the following lines.
-       Forth slaat de volgende regels over.
-
-DOIGNORE is alvast een voorbeeld van een DOES-deel dat
-eerder gedefiniëerd wordt dan het CREATE-deel.
-In de Target Forth kun je met deze werkwijze voorwaartse
-referenties vermijden.
-
 DOIGNORE is a DOES-part that is defined before
 the definition of the CREATE-part. This method makes it
 possible to avoid forward references in the Target. 
@@ -68,7 +60,7 @@ possible to avoid forward references in the Target.
   R> >IN ! MARKER ;
 
 \ Converting a string into a number 
-\ Getallen inlezen
+\ Reading in numbers
 \ Behandel een eventueel minteken.
 : MINUS-SIGN? ( a n -- a n false | a+1 n-1 true )
   DUP
@@ -417,7 +409,7 @@ CR  .(   EINDE VAN META II )
 
 DECIMAL
 
-<---- d e f i n i ë r e n d e  w o o r d e n ---->
+<---- d e f i n i ï¿½ r e n d e  w o o r d e n ---->
 
 
 HX 0BD CONSTANT (JSR)
@@ -716,7 +708,7 @@ FORTH
 \ Voor de assembler in de target Forth ================
 
 \ ==================== multi-creating (AN) ================
-\ Groepsgewijs woorden definiëren.
+\ Groepsgewijs woorden definiï¿½ren.
 \ -1 fungeert als afsluiter.
 \ Bedenk: HX leest een getal (woord) uit de invoerstroom.
 
@@ -978,7 +970,7 @@ HEX
 HEX
 : ROMIMAGE ( -- )
  C000 TO ORIGINTARGA
- S" targ601.f" INCLUDED          \ laad target code
+ S" targ601.f" INCLUDED          \ load target code
  HERE
     ORIGINHOSTA 4000 + OVER - 
     DUP ALLOT

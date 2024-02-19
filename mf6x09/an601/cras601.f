@@ -3,34 +3,34 @@
 
 <----   cras601 -- AN -- 12jul2005
 
-  -- Herordening en vernieuwing van de code in de cross assembler.
+  -- Reordering and renewing code in the cross assembler.
 
- Indeling:
-  1. Hulpwoordjes
+Classification:
+  1. Auxiliary words
   2. Doers
-  3. Multi-creating (nieuw)
-  4. De assemblercommando's (alleen deze komen in META)
+  3. Multi-creating (new)
+  4. Assembly commands (only these come in META)
 
- Verder:
+ Further:
 
- - Losse DOES-delen, zoals in de Target assembler.
- - CREATING - Stroomlijning van groepen gelijksoortige definities.
- - Compiler security voor IF, ELSE, enz.
- - Alle ELSEs zijn "wegbezuinigd".
- - MODE is nu een VALUE
- - INITMODE is toegevoegd in ?ADRERR (nu ?ILLEGAL).
- - naamswijzigingen  voor de doers van opcodes. DONEG DOSEX DOBRA DOBEQ etc.
+ - Separate DOES parts, as in the Target assembler.
+ - CREATING - Streamlining of groups of similar definitions.
+ - Compiler security for IF, ELSE, etc.
+ - All ELSEs have been "deprecated".
+ - MODE is now a VALUE
+ - INITMODE has been added in ?ADRERR (now ?ILLEGAL).
+ - name changes for the doers of opcodes. DONEG DOSEX DOBRA DOBEQ etc.
  
- Over een  Target assembler
+ About a Target assembler
  -------------------------
 
- De headerbouwer (onderdeel van CREATE) in de Metacompiler
- is nu zo aangepast dat naamgenoten een Homlink krijgen.
- De Metacompiler heeft zelf geen ZOEKmethode die daar rekening
- mee houdt, bij naamgenoten vindt hij altijd de nieuwste.
+ The header constructor (part of CREATE) in the Metacompiler
+ has now been modified to give namespaces a Homlink.
+ The Metacompiler itself has no SEARCH method that takes this into account
+ into account, for namesakes it always finds the newest one.
 
- # in assembler levert geen problemen op, want de Forth # speelt
-in de target code verder geen rol.
+ # in assembler does not cause any problems, because the Forth # plays
+no further role in the target code.
 
 \ (AN)
 ---->
@@ -168,7 +168,7 @@ CREATE (REG
 
 
 \ ==================== multi-creating (AN) ================
-\ Groepsgewijs woorden definiëren. \ -1 fungeert als afsluiter.
+\ Groepsgewijs woorden definiï¿½ren. \ -1 fungeert als afsluiter.
 \ Bedenk: HX leest een getal (woord) uit de invoerstroom.
 
 : CREATING1  ( doertoken -- )  \ 8 bit in body
