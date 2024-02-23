@@ -1,3 +1,5 @@
+\ Skratch file for playing around with gforth 
+
 .( what's up?) CR
 
-bye
+bye     \ Cleanly exit the program
