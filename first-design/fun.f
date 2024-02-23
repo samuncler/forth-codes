@@ -1,5 +1,6 @@
 \ Skratch file for playing around with gforth 
 
-.( what's up?) CR
+.( here are the words in here) CR
+words
 
 bye     \ Cleanly exit the program
