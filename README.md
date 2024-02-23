@@ -2,6 +2,10 @@
 
 A library of Forth applications to build knowledge of it
 
+## Baseline code
+
+* Using [gforth](https://gforth.org/) as the base currently
+
 ## What this is about
 
 To start the design process for an intuitive program that I have been contemplating for some years that exists in several guises.
